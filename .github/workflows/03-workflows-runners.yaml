@@ -10,5 +10,12 @@ jobs:
               run: |
                 echo "SHOWING THE OS"
                 echo "OS: $RUNNER_OS"
-
+    windows-hello:
+        runs-on: windows-latest
+        steps:
+            - name: Echo Hello
+              shell: bash
+              run: |
+                echo "SHOWING THE OS"
+                echo "OS: $RUNNER_OS"
     
