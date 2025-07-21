@@ -1,0 +1,16 @@
+name: 05 filters activity types
+
+on: 
+    pull_request:
+      types: [opened, synchronize]
+      branches:
+        - main
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mostrar na tela
+        run: echo "Pull request event detected. This job runs on pull requests."
+        
+ 
