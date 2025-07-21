@@ -1,0 +1,25 @@
+name: 06 contexts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    echo-data:
+        runs-on: ubuntu-latest
+        steps:
+          - name: mostrar contexto e informações
+            run: |
+              echo "nome do evento : ${{ github.event_name }}"
+              echo "ref: ${{ github.ref }}"
+              echo "sha: ${{ github.sha }}"
+              echo "workflow: ${{ github.workflow }}"
+              echo "actor: ${{ github.actor }}"
+              echo "run id: ${{ github.run_id }}"
+              echo "run number: ${{ github.run_number }}"
+              echo "repository: ${{ github.repository }}"
+          - name: Exibir variaveis
+            run: |
+              echo "contexto: ${{ vars.MY_VAR }}"
+          
