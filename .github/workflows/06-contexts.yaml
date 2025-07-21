@@ -1,8 +1,14 @@
 name: 06 contexts
+run-name: Exemplo de Contextos com ${{ inputs.com_nome }}
 
 on:
   push:
   workflow_dispatch:
+    inputs:
+      com_nome:
+        description: 'Nome para contexto'
+        required: false
+        default: "false"
    
 
 jobs:
